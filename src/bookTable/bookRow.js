@@ -36,6 +36,7 @@ export default class BookRow extends React.PureComponent {
         if (this.titleValidation === "error"){
             return ToastDanger("Invalid title");
         }
+        //JUST AND EXAMPLE! DO NOT USE IN REAL LIFE stringify! use comparator in js!
         const copyJSONString = (JSON.stringify(this.editCopyBook));
         const originalJSONString =JSON.stringify(this.props.book);
         if (this.editCopyBook && originalJSONString !== copyJSONString) {
